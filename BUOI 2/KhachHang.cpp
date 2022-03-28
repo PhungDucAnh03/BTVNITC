@@ -11,6 +11,7 @@ Viết chương trình nhập vào n(n nguyên dương nhập từ bàn phím) k
 */
 
 #include<iostream>
+#include<cstring>
 
 using namespace std;
 
@@ -55,10 +56,10 @@ class Khach_Hang
             cout << "So CMT : " << So_CMT << endl;
             cout << "Ho Khau : " << Ho_Khau << endl;                                          
         }
-
-        void Sap_Xep_Tang()
+        
+        char * getHo_Ten()
         {
-			   
+            return Ho_Ten;
         }
 
         void Sinh_Nhat_T12()
@@ -100,6 +101,22 @@ int main()
     {
         arr[i].Sinh_Nhat_T12();
     }
+
+    cout << "============================="<< endl;
+    cout << "Sap xep ten Khach Hang tang dan : " << endl;
+    for(int i = 0; i < KH; i++)
+    {
+	    for(int j = i+1; j < KH; j++)
+         {
+	        if(strcmpi(arr[i].getHo_Ten(), arr[j].getHo_Ten()) > 0)
+            {
+		        Khach_Hang tg = arr[i];
+		        arr[i] = arr[j];
+		        arr[j] = tg;	
+	        }
+	    }
+	    arr[i].Xuat();
+	}
   
     return 0;
 }
