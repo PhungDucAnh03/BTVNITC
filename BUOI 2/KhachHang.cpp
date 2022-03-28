@@ -58,20 +58,11 @@ class Khach_Hang
 
         void Sap_Xep_Tang()
         {
-			        if(arr[]Ho_Ten < hh[j].So_Luong)
-			        {
-				        HangHoa temp = hh[i];
-						        hh[i] = hh[j];
-						        hh[j] = temp;
-			        }
-		        }
-	        }
+			   
         }
 
         void Sinh_Nhat_T12()
         {
-            cout << "============================="<< endl;
-            cout << "Khach Hang Sinh Thang 12 : " << endl;
             if(ns.Thang == 12)
             {
                 cout << "Ho Ten : "<< Ho_Ten << endl;
@@ -103,17 +94,12 @@ int main()
         arr[i].Xuat();
     }
     //Khach Hang Sinh Thang 12
+    cout << "============================="<< endl;
+    cout << "Khach Hang Sinh Thang 12 : " << endl;
     for(int i = 0; i < KH; i++)
     {
         arr[i].Sinh_Nhat_T12();
     }
-
-    for(int i = 0; i < n ;i++)
-	{
-		for(int j = i + 1 ; j < n; j++)
-		{
-            
-        }
-    }    
+  
     return 0;
 }
